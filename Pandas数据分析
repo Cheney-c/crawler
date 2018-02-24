@@ -1,0 +1,10 @@
+import pandas
+df = pandas.DataFrame(newstotal)
+df.head()
+df.to_excel('news.xlsx')
+import sqlite3
+with sqlite3.connect('news.sqlite') as db:
+    df.to_sql('news', con = db)
+with sqlite3.connect('news.sqlite') as db:
+    df2 = pandas.read_sql_query('SELECT * FROM news', con = db)
+df2
