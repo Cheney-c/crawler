@@ -1,0 +1,16 @@
+def getnewsdetail(news):
+    result = {}
+    newspage = requests.get(news)
+    newspage.encoding = 'utf-8'
+    content = BeautifulSoup(newspage.text,'html.parser')
+    result['title'] = content.select('.main-title')[0].text
+    result['date'] = content.select('.date')[0].text
+    result['source'] = content.select('.source')[0].text
+    art = []
+    for p in content.select('#article p')[:-1]:
+        art.append(p.text.strip())
+    artic = '/n'.join(art)
+    result['article'] = artic
+    result['editor'] = content.select('.show_author')[0].text.lstrip('责任编辑：').strip()
+    result['comments'] = getcomment(news)
+    return result
