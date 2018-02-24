@@ -8,3 +8,5 @@ page=1&page_size=3&t_size=3&h_size=3&thread=1'
     com = requests.get(courl)
     jd =  json.loads(com.text.strip())
     return jd['result']['count']['total']
+uurl = 'http://news.sina.com.cn/c/nd/2018-02-22/doc-ifyrvaxe8717342.shtml'
+getcomment(uurl)
