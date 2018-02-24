@@ -1,0 +1,8 @@
+res2 = requests.get('http://news.sina.com.cn/c/nd/2018-02-22/doc-ifyrvaxe8717342.shtml')
+res2.encoding = 'utf-8'
+page = BeautifulSoup(res2.text,'html.parser')
+tit3 = page.select('.main-title')[0].text
+date = page.select('.date')[0].text
+source = page.select('.source')[0].text
+print(tit3)
+date
