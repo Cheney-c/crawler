@@ -1,3 +1,8 @@
 newsurl = 'http://news.sina.com.cn/c/nd/2018-02-22/doc-ifyrvaxe8717342.shtml'
 newsid = newsurl.split('/')[-1].lstrip('doc-i').rstrip('.shtml')
 newsid
+
+import re
+m = re.search('doc-i(.+).shtml',newsurl)
+newsid = m.group(1)
+newsid
