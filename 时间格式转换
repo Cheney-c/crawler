@@ -1,0 +1,4 @@
+from datetime import datetime
+dt = datetime.strptime(date,'%Y年%m月%d日 %H:%M')
+dt
+dt.strftime('%Y-%m-%d')

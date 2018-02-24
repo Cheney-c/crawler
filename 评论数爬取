@@ -1,0 +1,7 @@
+com = requests.get('http://comment5.news.sina.com.cn/page/info?version=1&format=json&\
+channel=gn&newsid=comos-fyrvaxe8717342&group=undefined&compress=0&ie=utf-8&oe=utf-8&\
+page=1&page_size=3&t_size=3&h_size=3&thread=1')
+#print(com.text)
+import json
+jd =  json.loads(com.text)
+jd['result']['count']['total']

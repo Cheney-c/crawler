@@ -1,0 +1,7 @@
+header = soup.select('h1')
+print(header)
+alink = soup.select('a')
+#print(alink[0].text)
+print(alink[0]['href'])
+for link in alink:
+    print(link['href'])

@@ -1,0 +1,2 @@
+editor = page.select('.show_author')[0].text.lstrip('责任编辑：').strip()
+editor

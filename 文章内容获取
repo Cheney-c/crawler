@@ -1,0 +1,7 @@
+def getart():
+    art = []
+    for p in page.select('#article p')[:-1]:
+        art.append(p.text.strip())
+    artic = '/n'.join(art)
+    return artic
+getart()
