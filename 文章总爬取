@@ -1,0 +1,8 @@
+tesurl = 'http://api.roll.news.sina.com.cn/zt_list?channel=news&cat_1=gnxw&cat_2==gdxw1||=gatxw||=zs-pl||=mtjj&level==1||=2&show_ext=1&show_all=1&show_num=22&tag=1&format=json&page={}&callback=newsloadercallback&_=1519402396976'
+newstotal = []
+for i in range(1,3):
+    vurl = tesurl.format(i)
+    temcon = getarls(vurl)
+    newstotal.extend(temcon)
+print(newstotal)
+len(newstotal)
