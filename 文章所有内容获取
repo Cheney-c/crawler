@@ -14,3 +14,4 @@ def getnewsdetail(news):
     result['editor'] = content.select('.show_author')[0].text.lstrip('责任编辑：').strip()
     result['comments'] = getcomment(news)
     return result
+getnewsdetail('http://news.sina.com.cn/c/2018-02-23/doc-ifyrvaxe9214673.shtml')
