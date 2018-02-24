@@ -1,0 +1,2 @@
+xx = page.select('.date-source a')[0]['href']
+xx
